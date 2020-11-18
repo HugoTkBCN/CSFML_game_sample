@@ -11,6 +11,8 @@ t_game *init_game(sfRenderWindow *window)
 {   
     t_game *game = malloc(sizeof(t_game));
 
+    if (game == NULL)
+        return (NULL);
     game->is_running = true;
     game->window = window;
     game->background = create_image(BACKGROUND_GAME_PATH, BACKGROUND_GAME_POS, BACKGROUND_GAME_RECT);
