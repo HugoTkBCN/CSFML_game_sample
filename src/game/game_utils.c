@@ -29,5 +29,6 @@ void destroy_game(t_game *game)
 {
     destroy_image(game->background);
     destroy_image(game->duck);
+    sfClock_destroy(game->clock);
     free(game);
 }
